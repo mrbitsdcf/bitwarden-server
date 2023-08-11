@@ -29,9 +29,9 @@ using Bit.Core.Vault.Services;
 using Bit.Infrastructure.Dapper;
 using Bit.Infrastructure.EntityFramework;
 using DnsClient;
+using Duende.IdentityServer.Configuration;
 using IdentityModel;
 using IdentityServer4.AccessTokenValidation;
-using IdentityServer4.Configuration;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Builder;
@@ -477,11 +477,7 @@ public static class ServiceCollectionExtensions
         {
             identityServerBuilder.AddSigningCredential(certificate);
         }
-        else if (env.IsDevelopment())
-        {
-            identityServerBuilder.AddDeveloperSigningCredential(false);
-        }
-        else
+        else if (!env.IsDevelopment())
         {
             throw new Exception("No identity certificate to use.");
         }

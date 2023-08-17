@@ -231,23 +231,6 @@
         "resolved": "6.0.0",
         "contentHash": "eVHCR7a6m/dm5RFcBzE3qs/Jg5j9R5Rjpu8aTOv9e4AFvaQtBXb5ah7kmwU+YwA0ufRwz4wf1hnIvsD2hSnI4g=="
       },
-      "IdentityModel.AspNetCore.OAuth2Introspection": {
-        "type": "Transitive",
-        "resolved": "4.0.1",
-        "contentHash": "ZNdMZMaj9fqR3j50vYsu+1U3QGd6n8+fqwf+a8mCTcmXGor+HgFDfdq0mM34bsmD6uEgAQup7sv2ZW5kR36dbA==",
-        "dependencies": {
-          "IdentityModel": "4.0.0"
-        }
-      },
-      "IdentityServer4.AccessTokenValidation": {
-        "type": "Transitive",
-        "resolved": "3.0.1",
-        "contentHash": "qu/M6UyN4o9NVep7q545Ms7hYAnsQqSdLbN1Fjjrn4m35lyBfeQPSSNzDryAKHbodyWOQfHaOqKEyMEJQ5Rpgw==",
-        "dependencies": {
-          "IdentityModel.AspNetCore.OAuth2Introspection": "4.0.1",
-          "Microsoft.AspNetCore.Authentication.JwtBearer": "3.0.0"
-        }
-      },
       "LaunchDarkly.Cache": {
         "type": "Transitive",
         "resolved": "1.0.2",
@@ -2592,7 +2575,6 @@
           "Duende.IdentityServer": "[6.0.0, )",
           "Fido2.AspNet": "[3.0.1, )",
           "Handlebars.Net": "[2.1.2, )",
-          "IdentityServer4.AccessTokenValidation": "[3.0.1, )",
           "LaunchDarkly.ServerSdk": "[7.0.0, )",
           "MailKit": "[3.2.0, )",
           "Microsoft.AspNetCore.Authentication.JwtBearer": "[6.0.4, )",

@@ -48,6 +48,7 @@ public class AccountController : Controller
     private readonly IGlobalSettings _globalSettings;
     private readonly Core.Services.IEventService _eventService;
     private readonly IDataProtectorTokenFactory<SsoTokenable> _dataProtector;
+    private readonly IOrganizationDomainRepository _organizationDomainRepository;
 
     public AccountController(
         IAuthenticationSchemeProvider schemeProvider,
@@ -66,7 +67,8 @@ public class AccountController : Controller
         UserManager<User> userManager,
         IGlobalSettings globalSettings,
         Core.Services.IEventService eventService,
-        IDataProtectorTokenFactory<SsoTokenable> dataProtector)
+        IDataProtectorTokenFactory<SsoTokenable> dataProtector,
+        IOrganizationDomainRepository organizationDomainRepository)
     {
         _schemeProvider = schemeProvider;
         _clientStore = clientStore;
@@ -85,6 +87,7 @@ public class AccountController : Controller
         _eventService = eventService;
         _globalSettings = globalSettings;
         _dataProtector = dataProtector;
+        _organizationDomainRepository = organizationDomainRepository;
     }
 
     [HttpGet]
@@ -514,11 +517,21 @@ public class AccountController : Controller
             }
         }
 
+        // If the email domain is verified, we can mark the email as verified
+        var emailVerified = false;
+        var emailDomain = CoreHelpers.GetEmailDomain(email);
+        if (!string.IsNullOrWhiteSpace(emailDomain))
+        {
+            var organizationDomain = await _organizationDomainRepository.GetDomainByOrgIdAndDomainNameAsync(orgId, emailDomain);
+            emailVerified = organizationDomain?.VerifiedDate.HasValue ?? false;
+        }
+
         // Create user record - all existing user flows are handled above
         var user = new User
         {
             Name = name,
             Email = email,
+            EmailVerified = emailVerified,
             ApiKey = CoreHelpers.SecureRandomString(30)
         };
         await _userService.RegisterUserAsync(user);

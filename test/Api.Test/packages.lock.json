@@ -371,17 +371,17 @@
       },
       "Duende.IdentityServer": {
         "type": "Transitive",
-        "resolved": "6.0.0",
-        "contentHash": "NFfnDv7H/1QmrjCy/m7t6ZG0/rdFZHLiPv67DthB9qKsN9aGHFVBV6Axt/gJXc+nijl1u19bVUxsbBuMv2hYYA==",
+        "resolved": "6.0.4",
+        "contentHash": "4HVjzx1F8v5J+U7oa8RGAQGj2QzmzNSu87r18Sh+dlh10uyZZL8teAaT/FaVLDObnfItGdPFvN8mwpF/HkI3Xw==",
         "dependencies": {
-          "Duende.IdentityServer.Storage": "6.0.0",
+          "Duende.IdentityServer.Storage": "6.0.4",
           "Microsoft.AspNetCore.Authentication.OpenIdConnect": "6.0.0"
         }
       },
       "Duende.IdentityServer.Storage": {
         "type": "Transitive",
-        "resolved": "6.0.0",
-        "contentHash": "iySBWSaUgzP8moK9MKiKii5Q8Nib45KpJhUf3qhIEFidCL1trbxI2EFthw4F4PxSih/3KqaVj8zogMU5GJcKeA==",
+        "resolved": "6.0.4",
+        "contentHash": "s5gAjfbpr2IMgI+fU2Nx+2AZdzstmbt9gpo13iX7GwvqSeSaBVqj9ZskAN0R2KF1OemPdZuGnfaTcevdXMUrrw==",
         "dependencies": {
           "IdentityModel": "6.0.0",
           "Microsoft.AspNetCore.DataProtection.Abstractions": "6.0.0"
@@ -2992,25 +2992,25 @@
           "AspNetCore.HealthChecks.SqlServer": "[6.0.2, )",
           "AspNetCore.HealthChecks.Uris": "[6.0.3, )",
           "Azure.Messaging.EventGrid": "[4.10.0, )",
-          "Commercial.Core": "[2023.9.0, )",
-          "Commercial.Infrastructure.EntityFramework": "[2023.9.0, )",
-          "Core": "[2023.9.0, )",
-          "SharedWeb": "[2023.9.0, )",
+          "Commercial.Core": "[2023.9.1, )",
+          "Commercial.Infrastructure.EntityFramework": "[2023.9.1, )",
+          "Core": "[2023.9.1, )",
+          "SharedWeb": "[2023.9.1, )",
           "Swashbuckle.AspNetCore": "[6.5.0, )"
         }
       },
       "commercial.core": {
         "type": "Project",
         "dependencies": {
-          "Core": "[2023.9.0, )"
+          "Core": "[2023.9.1, )"
         }
       },
       "commercial.infrastructure.entityframework": {
         "type": "Project",
         "dependencies": {
           "AutoMapper.Extensions.Microsoft.DependencyInjection": "[12.0.1, )",
-          "Core": "[2023.9.0, )",
-          "Infrastructure.EntityFramework": "[2023.9.0, )"
+          "Core": "[2023.9.1, )",
+          "Infrastructure.EntityFramework": "[2023.9.1, )"
         }
       },
       "common": {
@@ -3018,7 +3018,7 @@
         "dependencies": {
           "AutoFixture.AutoNSubstitute": "[4.17.0, )",
           "AutoFixture.Xunit2": "[4.17.0, )",
-          "Core": "[2023.9.0, )",
+          "Core": "[2023.9.1, )",
           "Kralizek.AutoFixture.Extensions.MockHttp": "[1.2.0, )",
           "Microsoft.NET.Test.Sdk": "[17.1.0, )",
           "NSubstitute": "[4.3.0, )",
@@ -3039,7 +3039,7 @@
           "BitPay.Light": "[1.0.1907, )",
           "Braintree": "[5.19.0, )",
           "DnsClient": "[1.7.0, )",
-          "Duende.IdentityServer": "[6.0.0, )",
+          "Duende.IdentityServer": "[6.0.4, )",
           "Fido2.AspNet": "[3.0.1, )",
           "Handlebars.Net": "[2.1.2, )",
           "LaunchDarkly.ServerSdk": "[7.0.0, )",
@@ -3071,8 +3071,8 @@
         "dependencies": {
           "AutoFixture.AutoNSubstitute": "[4.17.0, )",
           "AutoFixture.Xunit2": "[4.17.0, )",
-          "Common": "[2023.9.0, )",
-          "Core": "[2023.9.0, )",
+          "Common": "[2023.9.1, )",
+          "Core": "[2023.9.1, )",
           "Kralizek.AutoFixture.Extensions.MockHttp": "[1.2.0, )",
           "Microsoft.NET.Test.Sdk": "[17.1.0, )",
           "NSubstitute": "[4.3.0, )",
@@ -3082,7 +3082,7 @@
       "infrastructure.dapper": {
         "type": "Project",
         "dependencies": {
-          "Core": "[2023.9.0, )",
+          "Core": "[2023.9.1, )",
           "Dapper": "[2.0.123, )"
         }
       },
@@ -3090,7 +3090,7 @@
         "type": "Project",
         "dependencies": {
           "AutoMapper.Extensions.Microsoft.DependencyInjection": "[12.0.1, )",
-          "Core": "[2023.9.0, )",
+          "Core": "[2023.9.1, )",
           "Microsoft.EntityFrameworkCore.Relational": "[7.0.5, )",
           "Microsoft.EntityFrameworkCore.SqlServer": "[7.0.5, )",
           "Microsoft.EntityFrameworkCore.Sqlite": "[7.0.5, )",
@@ -3102,9 +3102,9 @@
       "sharedweb": {
         "type": "Project",
         "dependencies": {
-          "Core": "[2023.9.0, )",
-          "Infrastructure.Dapper": "[2023.9.0, )",
-          "Infrastructure.EntityFramework": "[2023.9.0, )"
+          "Core": "[2023.9.1, )",
+          "Infrastructure.Dapper": "[2023.9.1, )",
+          "Infrastructure.EntityFramework": "[2023.9.1, )"
         }
       }
     }

@@ -8,6 +8,7 @@ public abstract record Plan
     public ProductType Product { get; protected init; }
     public string Name { get; protected init; }
     public bool IsAnnual { get; protected init; }
+    public bool IsStarterPlan { get; protected init; }
     public string NameLocalizationKey { get; protected init; }
     public string DescriptionLocalizationKey { get; protected init; }
     public bool CanBeUsedByBusiness { get; protected init; }

@@ -18,6 +18,7 @@ public class PlanResponseModel : ResponseModel
         Product = plan.Product;
         Name = plan.Name;
         IsAnnual = plan.IsAnnual;
+        IsStarterPlan = plan.IsStarterPlan;
         NameLocalizationKey = plan.NameLocalizationKey;
         DescriptionLocalizationKey = plan.DescriptionLocalizationKey;
         CanBeUsedByBusiness = plan.CanBeUsedByBusiness;
@@ -48,6 +49,7 @@ public class PlanResponseModel : ResponseModel
     public ProductType Product { get; set; }
     public string Name { get; set; }
     public bool IsAnnual { get; set; }
+    public bool IsStarterPlan { get; set; }
     public string NameLocalizationKey { get; set; }
     public string DescriptionLocalizationKey { get; set; }
     public bool CanBeUsedByBusiness { get; set; }

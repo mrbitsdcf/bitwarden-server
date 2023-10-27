@@ -1,10 +1,13 @@
-﻿using Bit.Core.Auth.Enums;
+﻿using Bit.Core.AdminConsole.Entities;
+using Bit.Core.AdminConsole.Enums;
+using Bit.Core.AdminConsole.Models.Data.Organizations.Policies;
+using Bit.Core.AdminConsole.Repositories;
+using Bit.Core.Auth.Enums;
 using Bit.Core.Auth.Repositories;
 using Bit.Core.Entities;
 using Bit.Core.Enums;
 using Bit.Core.Exceptions;
 using Bit.Core.Models.Data.Organizations.OrganizationUsers;
-using Bit.Core.Models.Data.Organizations.Policies;
 using Bit.Core.Repositories;
 using Bit.Core.Services;
 using Bit.Core.Settings;
@@ -128,7 +131,7 @@ public class PolicyService : IPolicyService
                     ou.UserId != savingUserId);
                 switch (policy.Type)
                 {
-                    case Core.Enums.PolicyType.TwoFactorAuthentication:
+                    case PolicyType.TwoFactorAuthentication:
                         foreach (var orgUser in removableOrgUsers)
                         {
                             if (!await userService.TwoFactorIsEnabledAsync(orgUser))
@@ -140,7 +143,7 @@ public class PolicyService : IPolicyService
                             }
                         }
                         break;
-                    case Core.Enums.PolicyType.SingleOrg:
+                    case PolicyType.SingleOrg:
                         var userOrgs = await _organizationUserRepository.GetManyByManyUsersAsync(
                                 removableOrgUsers.Select(ou => ou.UserId.Value));
                         foreach (var orgUser in removableOrgUsers)

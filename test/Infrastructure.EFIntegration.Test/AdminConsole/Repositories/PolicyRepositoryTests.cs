@@ -3,10 +3,11 @@ using Bit.Core.Test.AutoFixture.Attributes;
 using Bit.Infrastructure.EFIntegration.Test.AutoFixture;
 using Bit.Infrastructure.EFIntegration.Test.Repositories.EqualityComparers;
 using Xunit;
-using EfRepo = Bit.Infrastructure.EntityFramework.Repositories;
 using Policy = Bit.Core.AdminConsole.Entities.Policy;
-using PolicyRepository = Bit.Infrastructure.EntityFramework.AdminConsole.Repositories.PolicyRepository;
+using EfRepo = Bit.Infrastructure.EntityFramework.Repositories;
+using EfAdminConsoleRepo = Bit.Infrastructure.EntityFramework.AdminConsole.Repositories;
 using SqlRepo = Bit.Infrastructure.Dapper.Repositories;
+using SqlAdminConsoleRepo = Bit.Infrastructure.Dapper.AdminConsole.Repositories;
 
 namespace Bit.Infrastructure.EFIntegration.Test.AdminConsole.Repositories;
 
@@ -17,9 +18,9 @@ public class PolicyRepositoryTests
         Policy policy,
         Organization organization,
         PolicyCompare equalityComparer,
-        List<PolicyRepository> suts,
+        List<EfAdminConsoleRepo.PolicyRepository> suts,
         List<EfRepo.OrganizationRepository> efOrganizationRepos,
-        Dapper.AdminConsole.Repositories.PolicyRepository sqlPolicyRepo,
+        SqlAdminConsoleRepo.PolicyRepository sqlPolicyRepo,
         SqlRepo.OrganizationRepository sqlOrganizationRepo
         )
     {

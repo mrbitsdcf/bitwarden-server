@@ -2,8 +2,9 @@
 using Bit.Core.Enums;
 using Bit.Core.Models.Data.Organizations.OrganizationUsers;
 using Bit.Core.Models.Data.Organizations.Policies;
+using Bit.Core.Services;
 
-namespace Bit.Core.Services;
+namespace Bit.Core.AdminConsole.Services;
 
 public interface IPolicyService
 {

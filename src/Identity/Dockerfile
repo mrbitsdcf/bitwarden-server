@@ -1,4 +1,4 @@
-FROM mcr.microsoft.com/dotnet/aspnet:6.0
+FROM mcr.microsoft.com/dotnet/aspnet:6.0.24-jammy-arm64v8
 
 LABEL com.bitwarden.product="bitwarden"
 
